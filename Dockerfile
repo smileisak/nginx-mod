@@ -1,8 +1,8 @@
-FROM alpine:3.4
+FROM alpine:3.7
 
-MAINTAINER Elisiano Petrini "elisiano@gmail.com"
+MAINTAINER Tan Jia Le "tan.jia.le.98@gmail.com"
 
-ENV NGINX_VERSION 1.11.8
+ENV NGINX_VERSION 1.13.10
 
 RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
 	&& CONFIG="\
@@ -176,4 +176,4 @@ COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80 443
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["nginx"]
